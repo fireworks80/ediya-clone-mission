@@ -1,6 +1,6 @@
 @charset 'utf-8';
 
-@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
 
 // =============================
 // variable
@@ -9,7 +9,7 @@ $font-default: sans-serif;
 $font-noto: 'Noto Sans KR';
 $font-all: $font-noto, $font-default;
 
-$loc: '../images/';
+$loc: 'http://fireworks80.dothome.co.kr/front-end-mission/4-5-offcanvas/';
 
 // =============================
 // mixin

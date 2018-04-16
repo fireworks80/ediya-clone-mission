@@ -1,4 +1,4 @@
-@import url(//fonts.googleapis.com/earlyaccess/notosanskr.css);
+@import url(https://fonts.googleapis.com/earlyaccess/notosanskr.css);
 *,
 *::before,
 *::after {
@@ -45,8 +45,8 @@ button {
   content: '';
 }
 
-/* ===================================
-    header
+/* ===================================
+    header
 =================================== */
 .header {
   position: fixed;
@@ -60,14 +60,14 @@ button {
 }
 
 .logo {
-  background: url("../images/ediya-logo.gif") no-repeat center top;
+  background: url("http://fireworks80.dothome.co.kr/front-end-mission/4-5-offcanvas/ediya-logo.gif") no-repeat center top;
   float: left;
   width: 202px;
   height: 20px;
 }
 
 .hamburger {
-  background: url("../images/navigation-button.gif") no-repeat center top;
+  background: url("http://fireworks80.dothome.co.kr/front-end-mission/4-5-offcanvas/navigation-button.gif") no-repeat center top;
   float: right;
   width: 26px;
   height: 22px;
@@ -107,7 +107,7 @@ button {
 }
 
 .gnb__close-btn {
-  background: url("../images/m_nav_close.png") no-repeat center top;
+  background: url("http://fireworks80.dothome.co.kr/front-end-mission/4-5-offcanvas/m_nav_close.png") no-repeat center top;
   position: absolute;
   top: 20px;
   right: 20px;
