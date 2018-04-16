@@ -1,13 +1,19 @@
 var el = function(selector, context) {
-	if (select.trim().length === 0 || typeof select !== 'string') {
+	if (selector.trim().length === 0 || typeof selector !== 'string') {
 		return null;
 	}
 
-	if (!context && context.trim().length !== 0 ) { context = document; }
-
-	if (context.nodeType === context.ELEMENT_NODE) {
-		el(String(context));
-	}
+	context = !context ? document : context.nodeType === 1 ? context : el(String(context));
 
 	return context.querySelector(selector);
 };
+
+var els = function(selector, context) {
+	if (selector.trim().length === 0 || typeof selector !== 'string') {
+		return null;
+	}
+
+	context = !context ? document : context.nodeType === 1 ? context : el(String(context));
+
+	return context.querySelectorAll(selector);
+}

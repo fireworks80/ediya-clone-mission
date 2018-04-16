@@ -26,3 +26,48 @@
 //
 // 예제 참고 URL: ediya.com/contents/drink.html
 // ------------------------------------------------------------------------------------------
+
+var hamburger = el('.hamburger', '.header');
+var gnbCloseBtn = el('.gnb__close-btn', '.header');
+var gnb = el('.gnb', '.header');
+var list = el('.drink-list');
+var items = els('.drink-list__item', list);
+
+var showPannel = function(target, time) {
+	target.hidden = false;
+	setTimeout(function() {
+		target.classList.add('is-active');
+	}, time);
+};
+
+var hidePannel = function(target, time) {
+	target.classList.remove('is-active');
+	setTimeout(function() {
+		target.hidden = true;
+	}, time);
+};
+
+
+var toggleDetailPanel = function(me, idx) {
+	me.addEventListener('click', function(e) {
+		e.preventDefault();
+
+		var disc = el('.drink-disc', items[idx]);
+
+		if (e.target.tagName.toLowerCase() === 'figure' || e.target.tagName.toLowerCase() === 'img') {
+			showPannel(disc, 100);
+
+		} else if (e.target.tagName.toLowerCase() === 'button') {
+			hidePannel(disc, 400);
+		}
+	}, false);
+};
+
+hamburger.addEventListener('click', function() {
+	showPannel(gnb, 100);
+}, false);
+gnbCloseBtn.addEventListener('click', function() {
+	hidePannel(gnb, 400);
+}, false);
+
+items.forEach(toggleDetailPanel);
